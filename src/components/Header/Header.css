@@ -1,0 +1,153 @@
+/* ==============================
+   Configurações do cabeçalho
+   ============================== */
+
+header {
+  width: 100%;
+  min-height: 8vh;
+
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* ==============================
+   Navegação
+   ============================== */
+
+nav {
+  width: 90%;
+  max-width: 75rem;
+  min-height: 8vh;
+
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+/* ==============================
+   Logo / Nome da aplicação
+   ============================== */
+
+nav > a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* ==============================
+   Menu de navegação
+   ============================== */
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+
+  padding: 0.7rem 1rem;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 500;
+
+  border-radius: 0.5rem;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* ==============================
+   Interações
+   ============================== */
+
+nav li a:hover,
+nav li a:focus-visible {
+  background-color: #ffffff;
+  color: #1d4ed8;
+}
+
+nav li a:focus-visible {
+  outline: 0.2rem solid #facc15;
+  outline-offset: 0.2rem;
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (max-width: 48rem) {
+  nav {
+    width: 92%;
+
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1rem;
+  }
+
+  nav ul {
+    width: 100%;
+    gap: 0.5rem;
+  }
+}
+
+/* ==============================
+   Celular
+   ============================== */
+
+@media (max-width: 30rem) {
+  header {
+    min-height: 12vh;
+  }
+
+  nav {
+    width: 90%;
+    padding: 1.2rem 0;
+
+    gap: 1.2rem;
+  }
+
+  nav > a {
+    max-width: 100%;
+
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    text-align: center;
+  }
+
+  nav ul {
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    gap: 0.3rem;
+  }
+
+  nav li a {
+    padding: 0.6rem 0.8rem;
+
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+  }
+}
+

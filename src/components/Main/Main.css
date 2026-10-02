@@ -1,0 +1,320 @@
+/* ==============================
+   Área principal
+   ============================== */
+
+main {
+  width: 100%;
+  min-height: 80vh;
+
+  padding: 5vh 5%;
+
+  background-color: #f4f7fb;
+  color: #1f2937;
+}
+
+/* ==============================
+   Conteúdo principal
+   ============================== */
+
+main > section {
+  width: 100%;
+  max-width: 75rem;
+
+  margin: 0 auto;
+}
+
+/* ==============================
+   Cabeçalho da seção
+   ============================== */
+
+main header {
+  width: 100%;
+
+  margin-bottom: 3rem;
+
+  text-align: center;
+}
+
+main h1 {
+  margin: 0 0 1rem;
+
+  color: #e3350d;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+main header p {
+  max-width: 45rem;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+/* ==============================
+   Formulário de busca
+   ============================== */
+
+main form {
+  width: 100%;
+  max-width: 55rem;
+
+  margin: 0 auto 4rem;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.7rem;
+
+  background-color: #ffffff;
+
+  border: 0.15rem solid #e5e7eb;
+  border-radius: 1rem;
+
+  box-shadow: 0 0.8rem 2rem rgba(30, 41, 59, 0.1);
+}
+
+/* ==============================
+   Label
+   ============================== */
+
+main form label {
+  color: #1e3a8a;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ==============================
+   Campo de busca
+   ============================== */
+
+main form input {
+  width: 100%;
+
+  padding: 1rem;
+
+  box-sizing: border-box;
+
+  background-color: #f8fafc;
+  color: #1f2937;
+
+  border: 0.15rem solid #cbd5e1;
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+main form input::placeholder {
+  color: #94a3b8;
+}
+
+main form input:focus {
+  background-color: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+}
+
+/* ==============================
+   Botão de busca
+   ============================== */
+
+main form button {
+  width: 100%;
+
+  padding: 1rem;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+main form button:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-0.1rem);
+}
+
+main form button:focus-visible {
+  outline: 0.2rem solid #facc15;
+  outline-offset: 0.2rem;
+}
+
+/* ==============================
+   Área de resultados
+   ============================== */
+
+main section > section {
+  width: 100%;
+}
+
+main section > section h2 {
+  margin: 0 0 2rem;
+
+  color: #1e3a8a;
+
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  text-align: center;
+}
+
+/* ==============================
+   Grid dos cards
+   ============================== */
+
+main section > section > div {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 15rem), 1fr)
+  );
+
+  gap: 1.5rem;
+}
+
+/*
+  Os cards dos Pokémon poderão ser
+  inseridos dentro deste grid.
+*/
+
+main section > section > div > article {
+  padding: 1.5rem;
+
+  background-color: #ffffff;
+
+  border: 0.15rem solid #e5e7eb;
+  border-radius: 1rem;
+
+  box-shadow: 0 0.5rem 1.2rem rgba(30, 41, 59, 0.08);
+
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+main section > section > div > article:hover {
+  transform: translateY(-0.3rem);
+
+  box-shadow: 0 0.8rem 1.5rem rgba(30, 41, 59, 0.15);
+}
+
+/* ==============================
+   Mensagem sem resultados
+   ============================== */
+
+main section > section > p {
+  width: 100%;
+
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+
+  box-sizing: border-box;
+
+  background-color: #fff7ed;
+  color: #9a3412;
+
+  border: 0.1rem solid #fed7aa;
+  border-radius: 0.8rem;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (min-width: 48rem) {
+  main {
+    padding: 6vh 6%;
+  }
+
+  main form {
+    padding: 2rem;
+  }
+
+  main form button {
+    width: auto;
+
+    align-self: flex-end;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ==============================
+   Desktop
+   ============================== */
+
+@media (min-width: 64rem) {
+  main {
+    padding: 8vh 7%;
+  }
+
+  main header {
+    margin-bottom: 4rem;
+  }
+
+  main form {
+    padding: 2rem 2.5rem;
+  }
+
+  main section > section > div {
+    gap: 2rem;
+  }
+}
+
+/* ==============================
+   Celulares pequenos
+   ============================== */
+
+@media (max-width: 30rem) {
+  main {
+    padding: 5vh 5%;
+  }
+
+  main header {
+    margin-bottom: 2rem;
+  }
+
+  main form {
+    margin-bottom: 3rem;
+    padding: 1.2rem;
+  }
+
+  main section > section > div {
+    grid-template-columns: 1fr;
+  }
+}

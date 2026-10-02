@@ -1,0 +1,151 @@
+
+/* ==============================
+   Rodapé
+   ============================== */
+
+footer {
+  width: 100%;
+  min-height: 20vh;
+
+  padding: 4vh 5%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  background-color: #1e3a8a;
+  color: #ffffff;
+
+  text-align: center;
+}
+
+/* ==============================
+   Textos
+   ============================== */
+
+footer p {
+  margin: 0;
+
+  max-width: 90%;
+
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.5;
+}
+
+/* Nome da aplicação */
+
+footer p:first-child {
+  color: #facc15;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+}
+
+/* Mensagem de encerramento */
+
+footer p:nth-child(2) {
+  color: #dbeafe;
+}
+
+/* Informação sobre a API */
+
+footer p:nth-child(3) {
+  color: #bfdbfe;
+}
+
+/* ==============================
+   Link da documentação
+   ============================== */
+
+footer a {
+  display: inline-block;
+
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  border: 0.1rem solid #ffffff;
+  border-radius: 0.5rem;
+
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+footer a:hover {
+  background-color: #ffffff;
+  color: #1e3a8a;
+
+  transform: translateY(-0.1rem);
+}
+
+footer a:focus-visible {
+  outline: 0.2rem solid #facc15;
+  outline-offset: 0.2rem;
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (min-width: 48rem) {
+  footer {
+    min-height: 18vh;
+
+    padding: 4vh 7%;
+  }
+
+  footer p {
+    max-width: 70%;
+  }
+}
+
+/* ==============================
+   Desktop
+   ============================== */
+
+@media (min-width: 64rem) {
+  footer {
+    min-height: 16vh;
+
+    padding: 4vh 10%;
+  }
+
+  footer p {
+    max-width: 50rem;
+  }
+}
+
+/* ==============================
+   Celulares
+   ============================== */
+
+@media (max-width: 30rem) {
+  footer {
+    min-height: 25vh;
+
+    padding: 4vh 6%;
+  }
+
+  footer p {
+    max-width: 100%;
+  }
+
+  footer a {
+    width: 80%;
+    max-width: 18rem;
+
+    text-align: center;
+  }
+}
+
